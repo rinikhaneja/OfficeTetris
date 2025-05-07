@@ -379,39 +379,49 @@ body::before {
     }
 
     .game-controls {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 0.5rem;
         margin-top: 1rem;
         width: 100%;
         max-width: 300px;
         margin: 1rem auto;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: var(--border-radius);
     }
 
     .control-row {
         display: flex;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 1rem;
         width: 100%;
     }
 
     .control-btn {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         font-size: 1.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.1s, background-color 0.2s;
     }
 
     #rotateBtn {
-        grid-column: 2;
         margin-bottom: 0.5rem;
     }
 
     #downBtn {
-        grid-column: 2;
+        width: 50px;
+        height: 50px;
     }
 
     .game-container {
@@ -452,9 +462,11 @@ body::before {
         position: relative;
         bottom: 0;
         padding-bottom: env(safe-area-inset-bottom);
+        margin-bottom: env(safe-area-inset-bottom);
     }
 
     .control-btn {
         touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
 } 
