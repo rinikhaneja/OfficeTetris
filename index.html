@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Tetris - Stress Relief Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>Office Tetris</h1>
+            <div class="level-indicator">Level: <span id="level">1</span></div>
+        </div>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas"></canvas>
+            
+            <div class="game-info">
+                <div class="score-container">
+                    <h2>Score</h2>
+                    <div id="score">0</div>
+                </div>
+                
+                <div class="next-piece">
+                    <h2>Next</h2>
+                    <canvas id="nextPiece"></canvas>
+                </div>
+                
+                <div class="controls">
+                    <button id="startBtn" class="btn">Start Game</button>
+                    <button id="pauseBtn" class="btn">Pause</button>
+                </div>
+                
+                <div class="level-info">
+                    <h2>Level Progress</h2>
+                    <div class="progress-bar">
+                        <div id="levelProgress"></div>
+                    </div>
+                </div>
+
+                <div class="game-controls">
+                    <div class="control-row">
+                        <button id="rotateBtn" class="control-btn">↻</button>
+                    </div>
+                    <div class="control-row">
+                        <button id="leftBtn" class="control-btn">←</button>
+                        <button id="downBtn" class="control-btn">↓</button>
+                        <button id="rightBtn" class="control-btn">→</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-message" id="gameMessage">
+            <div class="message-content">
+                <h2 id="messageTitle"></h2>
+                <p id="messageText"></p>
+                <button id="messageBtn" class="btn">Continue</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/tetris.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html> 
